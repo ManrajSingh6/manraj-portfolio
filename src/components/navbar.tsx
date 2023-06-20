@@ -3,7 +3,8 @@ import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IconContext } from "react-icons/lib/esm/iconContext";
 import { AiOutlineClose } from 'react-icons/ai';
-import {useState, useEffect} from "react";
+import {useState } from "react";
+
 const navLinks = [
     {
         linkTitle: "Home",
@@ -23,7 +24,7 @@ const navLinks = [
     }
 ]
 
-function Navbar(){
+export default function Navbar(){
     const [active, setActive] = useState("nav__menu");
     
     const navToggle = () => {
@@ -72,5 +73,3 @@ function Navbar(){
         </header>
     );
 }
-
-export default Navbar;

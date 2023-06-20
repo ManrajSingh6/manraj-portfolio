@@ -4,6 +4,8 @@ import Experiences from "./components/experiences";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <ToastContainer theme="colored" toastStyle={{backgroundColor: "var(--primary)", color: "var(--aqua-blue)"}}/>
     </div>
   )
 }

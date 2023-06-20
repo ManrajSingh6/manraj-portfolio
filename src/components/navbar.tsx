@@ -26,8 +26,8 @@ const navLinks = [
 function Navbar(){
     const [active, setActive] = useState("nav__menu");
     
-    const navToggle = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (active === "nav__menu") {
+    const navToggle = () => {
+        if (active === "nav__menu") {
             setActive("nav__menu nav__active");
             document.body.style.overflow = 'hidden';
         } else {

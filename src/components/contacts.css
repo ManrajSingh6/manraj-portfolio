@@ -12,7 +12,7 @@
 }
 
 .contact-form-container{
-    width: clamp(300px, 50%, 600px);
+    width: clamp(450px, 50%, 600px);
     align-self: center;
     padding: 40px 20px;
     margin-top: 20px;
@@ -69,6 +69,3 @@
 .contact-form-container button:hover{
     background-color: rgba(31, 40, 51, 0.5);
 }
-
-
-

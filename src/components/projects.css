@@ -5,7 +5,7 @@
 .projects-parent{
     width: 85%;
     margin: 0px auto 0 auto;
-    padding: 100px 20px;
+    padding: 50px 20px;
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -28,7 +28,10 @@
     gap: 5px;
     box-shadow: 1px 12px 25px -1px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--primary);
+}
 
+.project-card:nth-child(5){
+    grid-column-start: 2;
 }
 
 .project-card:hover{
@@ -72,4 +75,32 @@
     margin: 10px 0 10px 0;
 }
 
+@media screen and (max-width: 870px){
+    .project-card{
+        height: 360px;
+    }
+    .project-card-img-container{
+        width: 70%;
+        height: 40%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .project-card{
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 510px){
+    .project-card{
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 1290px){
+    .project-card:nth-child(5){
+        grid-column-start: 1;
+    }
+}
 

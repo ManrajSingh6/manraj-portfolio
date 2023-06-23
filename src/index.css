@@ -16,6 +16,10 @@ html::-webkit-scrollbar {
   background-color: var(--primary);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 html::-webkit-scrollbar-thumb{
   background-color: var(--white);
   border-radius: 2px;
@@ -86,7 +90,7 @@ nav{
   gap: 15px;
   color: var(--aqua-blue);
   border: 1px solid var(--aqua-blue);
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 5px;
   background-color: var(--lighter-primary);
   cursor: pointer;
@@ -111,7 +115,6 @@ nav{
   background: linear-gradient(180deg, rgba(11, 12, 16, 1), rgba(31, 40, 51, 1));
   height: 93vh;
 }
-
 .landing-parent{
   width: 85%;
   margin: 0 auto 0 auto;
@@ -176,7 +179,6 @@ nav{
   color: var(--aqua-blue);
   transition: all ease var(--hover-transition);
 }
-
 
 /* Media Queries */
 @media screen and (max-width: 800px) {

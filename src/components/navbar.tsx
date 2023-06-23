@@ -5,22 +5,23 @@ import { IconContext } from "react-icons/lib/esm/iconContext";
 import { AiOutlineClose } from 'react-icons/ai';
 import {useState } from "react";
 
-const navLinks = [
-    {
-        linkTitle: "Home",
-        linkTo: "/"
-    },
+interface NavLinkOpts {
+    linkTitle: string;
+    linkTo: string
+}
+
+const navLinks: NavLinkOpts[] = [
     {
         linkTitle: "Experience",
-        linkTo: "Experience"
+        linkTo: "#Experience"
     },
     {
         linkTitle: "Projects",
-        linkTo: "Projects"
+        linkTo: "#Projects"
     },
     {
         linkTitle: "Contact",
-        linkTo: "Contact"
+        linkTo: "#Contact"
     }
 ]
 
@@ -36,6 +37,11 @@ export default function Navbar(){
             document.body.style.overflow = 'unset';
         }
     }
+
+    function closeMenu(){
+        setActive("nav__menu")
+        document.body.style.overflow = 'unset';
+    }
     
     return(
         <header>
@@ -47,7 +53,7 @@ export default function Navbar(){
                             {
                                 navLinks.map(({linkTitle, linkTo}, index) => {
                                     return (
-                                        <li className="nav__item" key={index}><a href={linkTo}>{linkTitle}</a></li>
+                                        <li className="nav__item" key={index}><a href={`/${linkTo}`} onClick={closeMenu}>{linkTitle}</a></li>
                                     )
                                 })
                             }
@@ -65,8 +71,8 @@ export default function Navbar(){
                 <div className="menu-container">
                     {
                         active === "nav__menu" ? (
-                            <RxHamburgerMenu onClick={navToggle}/>
-                        ) : (<AiOutlineClose onClick={navToggle}/>)
+                            <RxHamburgerMenu className="nav-toggle-icons" onClick={navToggle}/>
+                        ) : (<AiOutlineClose className="nav-toggle-icons" onClick={navToggle}/>)
                     }
                 </div>
             </IconContext.Provider>

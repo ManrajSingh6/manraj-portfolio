@@ -24,7 +24,7 @@ export const allExperienceData: experienceData[] = [
         location: "Calgary, AB",
         descriptionPoints: [
             "Modelling, intelligent control and monitoring of energy storage and photovoltaic systems!",
-            "Feature development and testing containerized software.",
+            "Feature development and testing containerized software",
             "TypeScript, Python, C#, GraphQL and Node"
         ],
         imageSource: "ETBIcon.png"

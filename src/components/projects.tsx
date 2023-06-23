@@ -4,7 +4,7 @@ import { projectData } from "../data/data";
 
 export default function Projects(){
     return(
-        <div className="projects-main">
+        <div className="projects-main" id="Projects">
             <div className="projects-parent">
                 <p>Interesting things I've made.</p>
                 <div className="section-header-container">

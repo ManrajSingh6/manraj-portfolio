@@ -47,7 +47,7 @@ export default function Contact(){
     }
 
     return(
-        <div className="contacts-main">
+        <div className="contacts-main" id="Contact">
             <div className="contacts-parent">
                 <p>Get in touch with me.</p>
                 <div className="section-header-container">

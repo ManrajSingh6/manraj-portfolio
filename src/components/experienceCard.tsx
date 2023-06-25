@@ -9,7 +9,7 @@ interface ExperienceCardProps {
     imageSource: string
 }
 
-const imagePath = '/assets/images';
+const imagePath = '/assets/images/';
 
 export default function ExperienceCard({role, company, date, location, descriptionPoints, imageSource}: ExperienceCardProps){
     return(

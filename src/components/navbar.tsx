@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { IconContext } from "react-icons/lib/esm/iconContext";
 import { AiOutlineClose } from 'react-icons/ai';
 import {useState } from "react";
+import ManrajResume from "../assets/files/ManrajSinghResume.pdf";
 
 interface NavLinkOpts {
     linkTitle: string;
@@ -59,12 +60,10 @@ export default function Navbar(){
                             }
                         </ul>
                     </div>
-                    <div className="resume-container">
-                        <FontAwesomeIcon size="lg" icon={faCircleArrowDown} />
-                        <a className="resume-btn">
-                            Resume
-                        </a>
-                    </div>
+                    <a className="resume-container" href={ManrajResume}>
+                        <FontAwesomeIcon size="lg" icon={faCircleArrowDown} style={{color: "#66FCF1"}}/>
+                        Resume
+                    </a>
                 </div>
             </nav>
             <IconContext.Provider value={{color: 'white', size: '25px'}}>

@@ -18,7 +18,7 @@ export default function Landing(){
                     <IconContext.Provider value={{size: "30px"}}>
                         <div className="icons-container">
                             <a href="https://www.linkedin.com/in/manraj-singh-uofc/"><AiOutlineLinkedin className="icon"/></a>
-                            <a href="https://github.com/ManrajSingh6"><FaGithubSquare className="icon"/></a>
+                            <a href="https://github.com/ManrajSingh6" target="__blank"><FaGithubSquare className="icon"/></a>
                         </div>
                     </IconContext.Provider>
                     <a className="view-btn" href="#Experience">View More</a>

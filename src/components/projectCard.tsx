@@ -3,7 +3,7 @@ import {DiGithubBadge} from "react-icons/di";
 import {BiLinkExternal} from "react-icons/bi"
 import {IconContext} from "react-icons/lib/esm/iconContext";
 
-const imagePath = '/images/';
+const imagePath = '/assets/images';
 
 interface ProjectCardProps {
     projectTitle: string;

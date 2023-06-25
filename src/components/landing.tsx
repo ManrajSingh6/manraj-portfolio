@@ -2,7 +2,7 @@ import {AiOutlineLinkedin} from "react-icons/ai";
 import {FaGithubSquare} from "react-icons/fa";
 import {IconContext} from "react-icons/lib/esm/iconContext";
 
-const imagePath = '/images/';
+const imagePath = '/assets/images';
 
 export default function Landing(){
     return(

@@ -32,7 +32,7 @@ export default function Landing() {
           </p>
           <IconContext.Provider value={{ size: "30px" }}>
             <div className="icons-container">
-              <a href="https://www.linkedin.com/in/manraj-singh-uofc/">
+              <a href="https://www.linkedin.com/in/manrajs6/">
                 <AiOutlineLinkedin className="icon" />
               </a>
               <a href="https://github.com/ManrajSingh6" target="__blank">

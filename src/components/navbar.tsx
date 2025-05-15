@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IconContext } from "react-icons/lib/esm/iconContext";
 import { AiOutlineClose } from "react-icons/ai";
-import { useState } from "react";
 import ManrajResume from "../assets/files/ManrajSinghResume.pdf";
 
 interface NavLinkOpts {

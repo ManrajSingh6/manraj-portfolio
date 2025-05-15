@@ -3,8 +3,7 @@ import { DiGithubBadge } from "react-icons/di";
 import { BiLinkExternal } from "react-icons/bi";
 import { IconContext } from "react-icons/lib/esm/iconContext";
 import { ProjectData } from "../data/data";
-
-const IMAGE_ASSETS_PATH = "/assets/images";
+import { IMAGE_ASSETS_PATH } from "../utils/constants";
 
 export default function ProjectCard({
   title,

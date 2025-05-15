@@ -1,8 +1,7 @@
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { FaGithubSquare } from "react-icons/fa";
 import { IconContext } from "react-icons/lib/esm/iconContext";
-
-const imagePath = "/assets/images/";
+import { IMAGE_ASSETS_PATH } from "../utils/constants";
 
 export default function Landing() {
   return (
@@ -45,7 +44,7 @@ export default function Landing() {
           </a>
         </div>
         <div className="landing-img">
-          <img src={imagePath + "landingImg.png"} alt="code-img" />
+          <img src={`${IMAGE_ASSETS_PATH}/landingImg.png`} alt="code-img" />
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import { ExperienceData } from "../data/data";
+import { IMAGE_ASSETS_PATH } from "../utils/constants";
 import "./experiences.css";
-
-const imagePath = "/assets/images/";
 
 export default function ExperienceCard({
   role,
@@ -26,7 +25,10 @@ export default function ExperienceCard({
         </ul>
       </div>
       <div className="img-container">
-        <img src={imagePath + imageSource} alt={imageSource} />
+        <img
+          src={`${IMAGE_ASSETS_PATH}/${imageSource}`}
+          alt={"experience-card-img"}
+        />
       </div>
     </div>
   );

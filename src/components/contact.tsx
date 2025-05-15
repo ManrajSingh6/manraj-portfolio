@@ -8,7 +8,9 @@ const EMAILJS_SERVICE_ID = "service_fb5vecp";
 const EMAILJS_TEMPLATE_ID = "template_cvt8ayj";
 const EMAILJS_PUBLIC_KEY = "48wvcdcHtnKo7qAAo";
 
-interface contactFormInputFields {
+const SUCCESS_STATUS = 200;
+
+interface ContactFormInputFields {
   name: string;
   email: string;
   message: string;
@@ -19,7 +21,7 @@ export default function Contact() {
     useRef<HTMLFormElement>() as React.MutableRefObject<HTMLFormElement>;
 
   const [contactFormFields, setContactFormFields] =
-    useState<contactFormInputFields>({
+    useState<ContactFormInputFields>({
       name: "",
       email: "",
       message: "",
@@ -37,28 +39,23 @@ export default function Contact() {
     }));
   }
 
-  function submitContactForm(event: React.FormEvent) {
+  async function submitContactForm(event: React.FormEvent) {
     event.preventDefault();
-    emailjs
-      .sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        form.current,
-        EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          if (result) {
-            toast.success("Successfully sent email.");
-            setContactFormFields({ name: "", email: "", message: "" });
-          }
-        },
-        (error) => {
-          if (error) {
-            toast.error("Error sending mail.");
-          }
-        }
-      );
+
+    const mailSendResponse = await emailjs.sendForm(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      form.current,
+      EMAILJS_PUBLIC_KEY
+    );
+
+    if (mailSendResponse.status !== SUCCESS_STATUS) {
+      toast.error("Error sending mail.");
+      return;
+    }
+
+    toast.success("Successfully sent email.");
+    setContactFormFields({ name: "", email: "", message: "" });
   }
 
   return (
